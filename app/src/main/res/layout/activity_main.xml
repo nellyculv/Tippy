@@ -15,17 +15,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="48dp"
-        android:text="Base"
+        android:text="@string/base"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tvTipPercentLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="24%"
+        android:text="@string/_24"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
@@ -39,9 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Tip"
+        android:text="@string/tip"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTipPercentLabel" />
 
@@ -51,7 +53,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="Total"
+        android:text="@string/total"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintEnd_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintHorizontal_bias="1.0"
@@ -65,13 +67,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:ems="8"
-        android:hint="Bill Amount"
+        android:hint="@string/bill_amount"
         android:inputType="numberDecimal"
+        android:textColorHint="#78909C"
         android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBaseLabel"
         app:layout_constraintStart_toEndOf="@+id/tvBaseLabel"
         app:layout_constraintTop_toTopOf="@+id/tvBaseLabel"
-        app:layout_constraintBottom_toBottomOf="@+id/tvBaseLabel"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.648"
+        android:autofillHints="" />
 
 
     <SeekBar
@@ -87,20 +91,18 @@
         android:id="@+id/tvTipAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="19.96"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="@+id/tvTipLabel"
-        app:layout_constraintStart_toStartOf="@+id/seekBarTip"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
         app:layout_constraintTop_toTopOf="@+id/tvTipLabel" />
 
     <TextView
         android:id="@+id/tvTotalAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="103.11"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="@+id/tvTotalLabel"
-        app:layout_constraintStart_toStartOf="@+id/tvTipAmount"
+        app:layout_constraintStart_toStartOf="@+id/etBaseAmount"
         app:layout_constraintTop_toTopOf="@+id/tvTotalLabel" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
