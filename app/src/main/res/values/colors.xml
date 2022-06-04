@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="primary_orange">#FA580F</color>
-    <color name="darker_orange">#BA3500</color>
-    <color name="background_blue">#7FBDFA</color>
+    <color name="dark_yellow">#F5E304</color>
+    <color name="background_pink">#C22B82</color>
 </resources>
