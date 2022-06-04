@@ -10,5 +10,7 @@
 
     <color name="primary_orange">#FA580F</color>
     <color name="dark_yellow">#F5E304</color>
-    <color name="background_pink">#C22B82</color>
+    <color name="background_grey">#645A58</color>
+    <color name="color_worst_tip">#DC1E0B</color>
+    <color name="color_best_tip">#35BA01</color>
 </resources>

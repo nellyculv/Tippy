@@ -1,5 +1,6 @@
  package com.sculver.tippy
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -8,6 +9,8 @@ import android.util.Log
 import android.widget.EditText
 import android.widget.SeekBar
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+import androidx.vectordrawable.graphics.drawable.ArgbEvaluator
 
  private const val TAG = "MainActivity"
  private const val INITIAL_TIP_PERCENT = 15
@@ -58,6 +61,7 @@ import android.widget.TextView
          })
      }
 
+     @SuppressLint("RestrictedApi")
      private fun updateTipDescription(tipPercent: Int) {
         val tipDescription = when (tipPercent) {
             in 0..9 -> "Poor"
@@ -66,9 +70,14 @@ import android.widget.TextView
             in 20..24 -> "Great"
             else -> "Amazing"
         }
-         tvTipDescription.text = "Good"
+         tvTipDescription.text = tipDescription
          //Update the color based on the tipPercent
-
+         val color = ArgbEvaluator().evaluate(
+             tipPercent.toFloat() / seekBarTip.max,
+             ContextCompat.getColor(this, R.color.color_worst_tip),
+             ContextCompat.getColor(this, R.color.color_best_tip)
+         )as Int
+         tvTipDescription.setTextColor(color)
      }
 
      private fun computeTipandTotal() {

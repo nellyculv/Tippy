@@ -12,9 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApI="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <item name="android:colorBackground">@color/background_pink</item>
+        <item name="android:colorBackground">@color/background_grey</item>
         <item name="android:textColorTertiary">@color/black</item>
-
-
     </style>
 </resources>
